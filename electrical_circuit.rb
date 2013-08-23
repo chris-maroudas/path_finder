@@ -33,7 +33,7 @@ class CircuitFinder
   def find_neighbours_for(node)
 
     elements.find_all do |element|
-      node.neighbour_with?(element)
+      node.parent_of?(element)
     end
 
   end
@@ -103,7 +103,7 @@ class Node
     @cost = point[2]
   end
 
-  def neighbour_with?(node)
+  def parent_of?(node)
     finish == node.start
   end
 
@@ -120,6 +120,7 @@ end
 
 
 #TODO Create every single available circuit, compare costs and keep the lowest.
+
 
 
 # Program start
