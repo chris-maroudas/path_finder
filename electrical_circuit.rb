@@ -118,6 +118,10 @@ class Node
 
 end
 
+
+#TODO Create every single available circuit, compare costs and keep the lowest.
+
+
 # Program start
 
 elements = [
